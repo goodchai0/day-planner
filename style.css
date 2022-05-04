@@ -1,0 +1,39 @@
+h3 {
+  background-color: #d3d3d3;
+  border-radius: 5px;
+  text-align: center;
+  width: 100%;
+}
+
+.label,
+.create,
+.delete {
+  width: 100%;
+}
+
+.jumbotron {
+  text-align: center;
+  background-color: transparent;
+  color: black;
+  border-radius: 0;
+  border-bottom: 10px solid black;
+}
+
+.todos {
+  border-top: 1px solid white;
+}
+
+.dataPicker,
+.timeBlocker {
+  border-radius: 5px;
+}
+
+#dayEarlier,
+#dayPicked,
+#dayLater {
+  font-size: 1.5em;
+}
+#dayEarlier,
+#dayLater {
+  font-weight: bold;
+}
