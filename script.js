@@ -12,7 +12,7 @@ $(function(){
         for(let i = 0; i < 24; i++){
             $("#timeBlocks").append(
                 `<div class='col-md-12 pb-2 mb-2 timeBlock' data-block='${i}'>
-                    <form class='form-inline m-2 p-2'>
+                    <form class='form-inline m-2 p-2' id='activity-form'>
 
                         <div class='col-xs-12 col-md-2'>
                             <label for='inlineFormInputName2'>
@@ -147,6 +147,10 @@ $(function(){
     generateView()
 
     $(".create").on("click", addActivity)
+
+    $('#activity-form').on('submit', (e) => {
+        e.preventDefault();
+    });
     
     // GO BACK A DAY 
     $("#dayEarlier").on("click", () => {
