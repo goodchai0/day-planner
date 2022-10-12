@@ -13,8 +13,17 @@ h3 {
 
 .jumbotron {
   text-align: center;
-  background-color: transparent;
-  color: black;
+  background-image: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0.6) 0%,
+      rgba(0, 0, 0, 0.6) 100%
+    ),
+    url(https://placeimg.com/1000/481/nature);
+  background-attachment: static;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: white;
   border-radius: 0;
   border-bottom: 10px solid black;
 }
