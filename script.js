@@ -91,14 +91,14 @@ $(function(){
     }
     
     // DYNAMICALLY CREATE TODO ITEMS & CORRESPONDING DELETE BUTTONS
-    function displayItem(btn, val){
+    function displayItem(btn, val, index){
         $(`div[data-hour=${btn}]`).append(
 
             `<div class='col-xs-12 col-md-2 mt-2'>
                 <div class='card'> 
                     <div class='card-body'>
                         <p>${val}</p>
-                        <button type='button' class='btn btn-danger delete' data-hour='${btn}' data-value='${val}'>Delete</button>
+                        <button type='button' class='btn btn-danger delete' data-hour='${btn}' data-value='${val}' data-index='${index}'>Delete</button>
                     </div>
                 </div>
             </div>`
@@ -113,8 +113,8 @@ $(function(){
 
         if(saved){
             saved.forEach(hour=>{
-                hour.activity.forEach(activity=>{
-                    displayItem(hour.time,activity)
+                hour.activity.forEach((activity,index)=>{
+                    displayItem(hour.time,activity, index)
                 })
             })
         }
@@ -126,12 +126,12 @@ $(function(){
         let date = moment($('#dayPicked').text()).locale('fr').format('L');
         let saved = JSON.parse(localStorage.getItem(date));
         let buttonHour = $(this).attr("data-hour");
-        let buttonValue = $(this).attr("data-value");
+        let buttonIndex = $(this).attr("data-index");
 
         saved.forEach((hour, i) => {
             if(hour.time == buttonHour){ 
-                // BUG: IF ELEMENTS THAT SHARE AN ARRAY HAVE THE SAME NAME, THEY BOTH GET GANKED
-                let index = hour.activity.findIndex(el => el === buttonValue);
+                //search in arr for element with current index
+                let index = hour.activity.findIndex(el => el === buttonIndex);
                 hour.activity.splice(index, 1);
                 // IF LAST ACTIVITY IN ARR, REMOVE ARR SO IT PLAYS NICE IN addActivity FUNC
                 if(hour.activity.length === 0){
