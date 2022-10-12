@@ -72,18 +72,18 @@ $(function(){
     function colorBlocks(){
         let date = moment($('#dayPicked').text()).locale('fr').format('L');
         let currentHour = moment().hour();
-        let colorCode = 'rgba(255, 0, 0, 0.8);';
+        let colorCode = ' #ED2939';
         
         $('.timeBlock').each(function(){
             if(moment(date).isBefore(moment(immutableToday).locale('fr').format('L'))){
             }else if(moment(date).isAfter(moment(immutableToday).locale('fr').format('L'))){
-                colorCode = 'rgba(0,128,0, 0.8);';
+                colorCode = '#3F704D';
             }else{
                 if($(this).attr('data-block') == currentHour){
-                    colorCode = 'rgba(255,255,0, 0.8);';
+                    colorCode = '#F4C430';
                 }
                 if($(this).attr('data-block') > currentHour){
-                    colorCode = 'rgba(0,128,0, 0.8);';
+                    colorCode = '#3F704D';
                 }
             }
             $(this).attr('style', `background-color:${colorCode};`)
@@ -165,3 +165,19 @@ $(function(){
         refreshItems()
     })
 })
+
+let darkMode = document.querySelector("#darkMode");
+let b = document.querySelector("body");
+let fm = document.querySelector("#dayPicked");
+darkMode.addEventListener('click', () => {
+    if(darkMode.innerText == "Enable Dark Mode") {
+        darkMode.innerText = "Enable Light Mode";
+        b.style.backgroundColor = "#2F3032";
+        fm.style.backgroundColor = "#DBD8E3";
+    }
+    else {
+        darkMode.innerText = "Enable Dark Mode";
+        b.style.backgroundColor = "white";
+        fm.style.backgroundColor = "white";
+    }
+});
