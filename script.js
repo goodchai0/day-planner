@@ -16,7 +16,7 @@ $(function(){
 
                         <div class='col-xs-12 col-md-2'>
                             <label for='inlineFormInputName2'>
-                                <h3 class='mt-2 p-1'>Hour: ${i < 10 ? '0' + i : i}</h3>
+                                <h3 class='mt-2 p-1'>${i < 10 ? '0' + i : i}:00 Hr</h3>
                             </label>
                         </div>
 
