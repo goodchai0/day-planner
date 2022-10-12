@@ -58,3 +58,104 @@ h3 {
 .btn-primary{
   font-weight: bold;
 }
+/* footer */
+.footer1
+{
+  background: rgb(33, 32, 32);
+  position: relative;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.footer1 h2{
+  color: white;
+  padding-top: 2%;
+  padding-bottom: 1%;
+  padding-left: 5%;
+  margin: auto;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.footer1 p{
+  color: rgb(151, 146, 146);
+  margin: auto;
+  padding-left: 5%;
+  padding-bottom: 2%;
+  padding-right: 65%;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.name1{
+  width:500px;
+  padding:15px;
+  border-radius:15px;
+  border:0;
+  height:15px;
+  margin-left: 900px;
+  margin-bottom:30px;
+  margin-top: 100px;
+}
+.mail1{
+  width:500px;
+  padding:15px;
+  border-radius:15px;
+  border:0;
+  height:15px;
+  margin-left: 900px;
+  margin-bottom:30px;
+}
+textarea{
+  width:500px;
+  resize:both;
+  padding:15px;
+  border-radius:15px;
+  border:0;
+  height:150px;
+  margin-left: 900px;
+}
+.button1{
+  background-color: rgb(42, 41, 41);
+  color: white;
+  padding-left: 40px;
+  padding-right: 40px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  text-align: center;
+  margin-left: 1100px;
+  cursor:grab;
+  border-radius: 10%;
+  border-style: none;
+  margin-bottom: 20px;
+}
+.button1:hover{
+  background-color: #262322;
+}
+.footer1 h6{
+  color: white;
+  padding-top: 2%;
+  padding-bottom: 2%;
+  padding-left: 42%;
+  margin: auto;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.soc-ic
+    {
+        position: relative;
+        padding: 0;
+        margin: 0;
+    }
+.soc-ic li
+    {
+        display: inline-block;
+        list-style: none;
+    }
+.soc-ic li a
+    {
+        border-radius: 50%;
+        color: #606060;
+        text-decoration: none;
+        transition: all 0.4s ease-in-out;
+        text-align: center;
+        margin-right: 45px;
+    }
+.soc-ic li a:hover
+    {
+        color: #D43F52;
+    }
