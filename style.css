@@ -1,3 +1,6 @@
+body{
+  font-family:Verdana, Geneva, Tahoma, sans-serif;
+}
 h3 {
   background-color: #d3d3d3;
   border-radius: 5px;
@@ -32,17 +35,20 @@ h3 {
   border-top: 1px solid white;
 }
 
-.dataPicker,
-.timeBlocker {
+.datePicker,
+.timeBlock {
   border-radius: 5px;
+
 }
 
 #dayEarlier,
 #dayPicked,
 #dayLater {
-  font-size: 1.5em;
+  font-size: 2em;
   font-weight: bold;
   align-items: center;
+  border-radius: 50px;
+
 }
 #dayEarlier,
 #dayLater {
