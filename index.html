@@ -21,72 +21,62 @@
       crossorigin="anonymous"
     />
     <link rel="stylesheet" href="style.css" />
-    <link rel="icon" href="./images/new.png" type="image/png" />
+    <link rel="icon" href="./images/new.png" type="image/png" class="bg-img" />
     <title>Work Day Scheduler</title>
   </head>
 
-  <body>
-    <!-- header start -->
-    <header class="jumbotron">
-      <h1 class="display-3">Work Day Scheduler</h1>
-      <p class="lead">A simple calendar app for scheduling your work day</p>
-      <p id="currentDay" class="lead"></p>
-      <p class="lead"><button class="btn btn-danger" id="darkMode">Enable Dark Mode</button> </p>
-    </header>
-    <!-- header end -->
+<body>
+  <!-- header start -->
+  <header class="jumbotron">
+    <h1 class="display-3">Work Day Scheduler</h1>
+    <p class="lead">A simple calendar app for scheduling your work day</p>
+    <p id="currentDay" class="lead"></p>
+    <p class="lead"><button class="btn btn-danger" id="darkMode">Enable Dark Mode</button></p>
+  </header>
+  <!-- header end -->
 
-    <div class="container">
-      <div class="row justify-content-md-center">
-        <div class="col-xs-12 col-md-12 pb-2 pt-3 datePicker">
-          <div class="row">
-            <div class="col-md-2 mb-2">
-              <button
-                type="button"
-                class="btn btn-warning"
-                style="width: 100%"
-                id="dayEarlier"
-              >
-                &lt;
-              </button>
-            </div>
-            <div class="col-md-8 mb-2">
-              <div
-                style="background-color: white; width: 100%"
-                class="btn"
-                id="dayPicked"
-              ></div>
-            </div>
-            <div class="col-md-2 mb-2">
-              <button
-                type="button"
-                class="btn btn-warning"
-                style="width: 100%"
-                id="dayLater"
-              >
-                &gt;
-              </button>
-            </div>
+  <div class="container">
+    <div class="row justify-content-md-center">
+      <div class="col-xs-12 col-md-12 pb-2 pt-3 datePicker">
+        <div class="row">
+          <div class="col-md-2 mb-2">
+            <button type="button" class="btn btn-warning" style="width: 100%" id="dayEarlier">
+              &lt;
+            </button>
+          </div>
+          <div class="col-md-8 mb-2">
+            <div style="background-color: yellow; width: 100%" class="btn" id="dayPicked"></div>
+          </div>
+          <div class="col-md-2 mb-2">
+            <button type="button" class="btn btn-warning" style="width: 100%" id="dayLater">
+              &gt;
+            </button>
           </div>
         </div>
       </div>
-      <div class="row mb-3" id="timeBlocks"></div>
     </div>
+    <div class="row mb-3" id="timeBlocks"></div>
+
+    <!-- footer start -->
+    <footer>
+      <div class="btn_back"> <a href="#" class="goToTop"><button type="button" class="btn btn-primary btn-lg">Back to
+            top</button></a>
+      </div>
+    </footer>
+    <!-- footer end -->
+  </div>
 
   <!-- scripts start -->
-    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.25.1/moment-with-locales.min.js"></script>
-    <script
-      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
-      integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
-      crossorigin="anonymous"
-    ></script>
-    <script
-      src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
-      integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
-      crossorigin="anonymous"
-    ></script>
-    <script src="script.js"></script>
-  <!-- scripts end -->
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.25.1/moment-with-locales.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+    crossorigin="anonymous"></script>
+  <script src="script.js"></script>
+  <!-- script end -->
+</body>
 
-  </body>
 </html>
