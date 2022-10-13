@@ -1,5 +1,6 @@
 body{
-  font-family:Verdana, Geneva, Tahoma, sans-serif;
+  font-family:'Fredoka One', cursive;
+  font-family: 'Space Mono', monospace;
 }
 h3 {
   background-color: #d3d3d3;
@@ -26,6 +27,7 @@ h3 {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+  
   color: white;
   border-radius: 0;
   border-bottom: 10px solid black;
@@ -70,4 +72,8 @@ h3 {
   100% {
     opacity: 100;
   }
+}
+#darkMode{
+  background-color:black;
+  font: white;
 }
