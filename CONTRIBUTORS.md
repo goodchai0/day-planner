@@ -14,3 +14,4 @@ We are very grateful to the following people have contributed to this project.
 - [Rahul Chaudhary](https://github.com/rahulchaudhary2244)
 - [Amit Kumar](https://github.com/goodchai0)
 - [Reuben Antz](https://github.com/wizeewig)
+- [WFM366](https://github.com/wfm366)
