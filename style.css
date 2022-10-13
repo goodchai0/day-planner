@@ -22,7 +22,7 @@ h3 {
       rgba(0, 0, 0, 0.6) 0%,
       rgba(0, 0, 0, 0.6) 100%
     ),
-    url(https://placeimg.com/1000/481/nature);
+    url(images/daily-planner-thestreet.jpeg);
   background-attachment: static;
   background-position: center;
   background-repeat: no-repeat;
@@ -31,10 +31,12 @@ h3 {
   color: white;
   border-radius: 0;
   border-bottom: 10px solid black;
+ 
 }
 
 .todos {
   border-top: 1px solid white;
+ 
 }
 
 .datePicker,
@@ -60,5 +62,6 @@ h3 {
 
 .btn-primary{
   font-weight: bold;
+  border-radius: 8px;
 }
 
