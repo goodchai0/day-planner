@@ -58,3 +58,16 @@ h3 {
 .btn-primary{
   font-weight: bold;
 }
+
+.display-3, .bg-img {
+  animation: fadein 3s;
+}
+
+@keyframes fadein {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 100;
+  }
+}
