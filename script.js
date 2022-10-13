@@ -269,11 +269,11 @@ darkMode.addEventListener('click', () => {
     if(darkMode.innerText == "Enable Dark Mode") {
         darkMode.innerText = "Enable Light Mode";
         b.style.backgroundColor = "#2F3032";
-        fm.style.backgroundColor = "#DBD8E3";
+        fm.style.backgroundColor = "yellow";
     }
     else {
         darkMode.innerText = "Enable Dark Mode";
         b.style.backgroundColor = "white";
-        fm.style.backgroundColor = "white";
+        fm.style.backgroundColor = "yellow";
     }
 });
