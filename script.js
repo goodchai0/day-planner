@@ -121,7 +121,6 @@ $(function(){
         colorBlocks()
     }
 
-
     function removeActivity(){
         let date = moment($('#dayPicked').text()).locale('fr').format('L');
         let saved = JSON.parse(localStorage.getItem(date));
