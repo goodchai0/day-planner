@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link type="image/x-icon" rel="shortcut icon" href="./images/clippy.png" />
+    <!-- <link type="image/x-icon" rel="shortcut icon" href="./images/clippy.png" /> //image is not available -->
     <link
       rel="stylesheet"
       href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
@@ -26,12 +26,14 @@
   </head>
 
 <body>
+  <!-- header start -->
   <header class="jumbotron">
     <h1 class="display-3">Work Day Scheduler</h1>
     <p class="lead">A simple calendar app for scheduling your work day</p>
     <p id="currentDay" class="lead"></p>
-    <p class="lead"><button class="btn btn-danger" id="darkMode">Enable Dark Mode</button> </p>
+    <p class="lead"><button class="btn btn-danger" id="darkMode">Enable Dark Mode</button></p>
   </header>
+  <!-- header end -->
 
   <div class="container">
     <div class="row justify-content-md-center">
@@ -55,15 +57,16 @@
     </div>
     <div class="row mb-3" id="timeBlocks"></div>
 
+    <!-- footer start -->
     <footer>
       <div class="btn_back"> <a href="#" class="goToTop"><button type="button" class="btn btn-primary btn-lg">Back to
             top</button></a>
       </div>
     </footer>
+    <!-- footer end -->
   </div>
 
-
-
+  <!-- scripts start -->
   <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.25.1/moment-with-locales.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
@@ -73,6 +76,7 @@
     integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
     crossorigin="anonymous"></script>
   <script src="script.js"></script>
+  <!-- script end -->
 </body>
 
 </html>
