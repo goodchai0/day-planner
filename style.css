@@ -7,6 +7,7 @@ h3 {
   border-radius: 5px;
   text-align: center;
   width: 100%;
+  font-size: 1.5rem;
 }
 
 .label,
@@ -65,3 +66,34 @@ h3 {
   border-radius: 8px;
 }
 
+@media only screen and (min-width: 200px) and (max-width: 430px) {
+  .display-3 {
+    font-size: 3rem;
+  }
+
+  .lead {
+    font-size: 1rem;
+  }
+
+  #dayEarlier,
+  #dayPicked,
+  #dayLater {
+    font-size: 1.5rem;
+  }
+}
+@media only screen and (min-width: 992px) and (max-width: 1200px) {
+  h3{
+    font-size: 1.25rem;
+  }
+}
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+  h3{
+    font-size: 1rem;
+  }
+  .hour{
+    margin: 0;
+  }
+  .hourdiv{
+    padding: 0;
+  }
+}
