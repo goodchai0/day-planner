@@ -11,132 +11,114 @@ $(function(){
         // DYNAMICALLY CREATE TIMEBLOCKS
         for(let i = 0; i < 5; i++){
             $("#timeBlocks").append(
-                `<div class='col-md-12 pb-2 mb-2 timeBlock' data-block='${i}' style='background: linear-gradient(#d3c8c854, black); border-radius:18px'>
+                `<div class='col-md-12 pb-2 my-3 mx-3  timeBlock' data-block='${i}' style='background: linear-gradient(#d3c8c854, black); border-radius:18px'>
                     <form class='form-inline m-2 p-2' id='activity-form'>
-
-                        <div class='col-xs-12 col-md-2'>
+                        
+<div class='hourdiv col-xs-12 col-md-2'>
                             <label for='inlineFormInputName2'>
-                                <h3 class='mt-2 p-1'>Hour: ${'0' + i}</h3>
+                                <h3 class='hour mt-2 p-1'>Hour: 0${i}</h3>
                             </label>
                         </div>
-
                         <div class='col-xs-12 col-md-8'>
                             <input type='text' class='form-control' data-hour='${i}' style='width:100%;'placeholder='Eat, sleep, code' minlength='2' maxlength='50'></input>
                         </div>
-
                         <div class='col-xs-12 col-md-2 pt-1'>
                             <button type='button' class='btn btn-primary create' data-hour='${i}'>Create</button>
                         </div>
                     </form>
-
                     <div class='row p-1 todos' data-hour='${i}'></div>
                 </div>`
             );   
         }
-        for(let i = 5; i < 8; i++){
+        for(let i = 5; i < 10; i++){
             $("#timeBlocks").append(
-                `<div class='col-md-12 pb-2 mb-2 timeBlock' data-block='${i}' style='background: linear-gradient(#c3b0a52b, #ff6c00); border-radius:18px'>
+                `<div class='col-md-12 pb-2 my-3 mx-3 timeBlock' data-block='${i}' style='background: linear-gradient(#c3b0a52b, #ff6c00); border-radius:18px'>
                     <form class='form-inline m-2 p-2' id='activity-form'>
-
-                        <div class='col-xs-12 col-md-2'>
+                        
+<div class='hourdiv col-xs-12 col-md-2'>
                             <label for='inlineFormInputName2'>
-                                <h3 class='mt-2 p-1'>Hour: ${'0' + i}</h3>
+                                <h3 class='hour mt-2 p-1'>Hour: 0${i}</h3>
                             </label>
                         </div>
-
                         <div class='col-xs-12 col-md-8'>
                             <input type='text' class='form-control' data-hour='${i}' style='width:100%;'placeholder='Eat, sleep, code' minlength='2' maxlength='50'></input>
                         </div>
-
                         <div class='col-xs-12 col-md-2 pt-1'>
                             <button type='button' class='btn btn-primary create' data-hour='${i}'>Create</button>
                         </div>
                     </form>
-
                     <div class='row p-1 todos' data-hour='${i}'></div>
                 </div>`
             );   
         }
-        for(let i = 8; i < 18; i++){
+        for(let i = 10; i < 18; i++){
             $("#timeBlocks").append(
-                `<div class='col-md-12 pb-2 mb-2 timeBlock' data-block='${i}' style='background: linear-gradient(#c9cbeb4f, #4848e0); border-radius:18px'>
+                `<div class='col-md-12 pb-2 my-3 mx-3 timeBlock' data-block='${i}' style='background: linear-gradient(#c9cbeb4f, #4848e0); border-radius:18px'>
                     <form class='form-inline m-2 p-2' id='activity-form'>
-
-                        <div class='col-xs-12 col-md-2'>
+                        
+<div class='hourdiv col-xs-12 col-md-2'>
                             <label for='inlineFormInputName2'>
-                                <h3 class='mt-2 p-1'>${i < 10 ? '0' + i : i}:00 Hr</h3>
+                                <h3 class='hour mt-2 p-1'>Hour: ${i}</h3>
                             </label>
                         </div>
-
                         <div class='col-xs-12 col-md-8'>
                             <input type='text' class='form-control' data-hour='${i}' style='width:100%;'placeholder='Eat, sleep, code' minlength='2' maxlength='50'></input>
                         </div>
-
                         <div class='col-xs-12 col-md-2 pt-1'>
                             <button type='button' class='btn btn-primary create' data-hour='${i}'>Create</button>
                         </div>
                     </form>
-
                     <div class='row p-1 todos' data-hour='${i}'></div>
                 </div>`
             );   
         }
         for(let i = 18; i < 21; i++){
             $("#timeBlocks").append(
-                `<div class='col-md-12 pb-2 mb-2 timeBlock' data-block='${i}' style='background: linear-gradient(#c3b0a52b, #ff6c00); border-radius:18px'>
+                `<div class='col-md-12 pb-2 my-3 mx-3 timeBlock' data-block='${i}' style='background: linear-gradient(#c3b0a52b, #ff6c00); border-radius:18px'>
                     <form class='form-inline m-2 p-2' id='activity-form'>
-
-                        <div class='col-xs-12 col-md-2'>
+                        
+<div class='hourdiv col-xs-12 col-md-2'>
                             <label for='inlineFormInputName2'>
-                                <h3 class='mt-2 p-1'>Hour: ${i}</h3>
+                                <h3 class='hour mt-2 p-1'>Hour: ${i}</h3>
                             </label>
                         </div>
-
                         <div class='col-xs-12 col-md-8'>
                             <input type='text' class='form-control' data-hour='${i}' style='width:100%;'placeholder='Eat, sleep, code' minlength='2' maxlength='50'></input>
                         </div>
-
                         <div class='col-xs-12 col-md-2 pt-1'>
                             <button type='button' class='btn btn-primary create' data-hour='${i}'>Create</button>
                         </div>
                     </form>
-
                     <div class='row p-1 todos' data-hour='${i}'></div>
                 </div>`
             );   
         }
         for(let i = 21; i < 24; i++){
             $("#timeBlocks").append(
-                `<div class='col-md-12 pb-2 mb-2 timeBlock' data-block='${i}' style='background: linear-gradient(#d3c8c854, black); border-radius:18px'>
+                `<div class='col-md-12 pb-2 my-3 mx-3 timeBlock' data-block='${i}' style='background: linear-gradient(#d3c8c854, black); border-radius:18px'>
                     <form class='form-inline m-2 p-2' id='activity-form'>
-
-                        <div class='col-xs-12 col-md-2'>
+                        <div class='hourdiv col-xs-12 col-md-2'>
                             <label for='inlineFormInputName2'>
-                                <h3 class='mt-2 p-1'>Hour: ${i}</h3>
+                                <h3 class='hour mt-2 p-1'>Hour: ${i}</h3>
                             </label>
                         </div>
-
                         <div class='col-xs-12 col-md-8'>
                             <input type='text' class='form-control' data-hour='${i}' style='width:100%;'placeholder='Eat, sleep, code' minlength='2' maxlength='50'></input>
                         </div>
-
                         <div class='col-xs-12 col-md-2 pt-1'>
                             <button type='button' class='btn btn-primary create' data-hour='${i}'>Create</button>
                         </div>
                     </form>
-
                     <div class='row p-1 todos' data-hour='${i}'></div>
                 </div>`
             );   
         }
 
         if(localStorage.getItem(date)){
-            console.log('Fetching from storage')
-            console.log(localStorage.getItem(date))
             refreshItems()
-        }else{
+        }/*else{
             colorBlocks()
-        }
+        }*/
     }
 
     function addActivity() {
@@ -152,15 +134,13 @@ $(function(){
         // FIRST SAVE GLOBAL || FIRST SAVE PER HOUR
         if(!saved.length || !saved.includes(savedElement[0])){
             saved.push({"time": inputVal.attr("data-hour"), "activity" : [inputVal.val()]});
-            // For new activity added specificying details for activity value, index
-            displayItem(buttonVal, inputVal.val(), 0)
+            displayItem(buttonVal, inputVal.val())
         }else{
             // IF THERE IS A PREVIOUS LOCAL SAVE AT THIS SPOT, ADD THE NEW ITEM TO IT
             saved.forEach(hour => {
                 if(hour.time == buttonVal && hour.activity.length){
                     hour.activity.push(inputVal.val());
-                    // For recent activity added specificying details for activity value, index
-                    displayItem(buttonVal, inputVal.val(), hour.activity.length -1)
+                    displayItem(buttonVal, inputVal.val())
                 }
             })    
         }
@@ -168,7 +148,6 @@ $(function(){
         localStorage.setItem(date, JSON.stringify(saved));
         inputVal.val('')
     }
-
     // function colorBlocks(){
     //     let date = moment($('#dayPicked').text()).locale('fr').format('L');
     //     let currentHour = moment().hour();
