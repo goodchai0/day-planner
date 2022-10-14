@@ -16,7 +16,7 @@ $(function(){
 
                         <div class='col-xs-12 col-md-2'>
                             <label for='inlineFormInputName2'>
-                                <h3 class='mt-2 p-1'>Hour: ${'0' + i}</h3>
+                                <h3 class='mt-2 p-1'>Hr: ${'0' + i}</h3>
                             </label>
                         </div>
 
@@ -217,6 +217,15 @@ $(function(){
         colorBlocks()
     }
 
+/* Toggle between adding and removing the "responsive" class to topnav when the user clicks on the icon */
+function myFunction() {
+    var x = document.getElementById("myTopnav");
+    if (x.className === "topnav") {
+      x.className += " responsive";
+    } else {
+      x.className = "topnav";
+    }
+  }
 
     function removeActivity(){
         let date = moment($('#dayPicked').text()).locale('fr').format('L');
