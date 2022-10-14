@@ -13,19 +13,23 @@ $(function(){
             $("#timeBlocks").append(
                 `<div class='col-md-12 pb-2 my-3 mx-3  timeBlock' data-block='${i}' style='background: linear-gradient(#d3c8c854, black); border-radius:18px'>
                     <form class='form-inline m-2 p-2' id='activity-form'>
+
                         
 <div class='hourdiv col-xs-12 col-md-2'>
                             <label for='inlineFormInputName2'>
                                 <h3 class='hour mt-2 p-1'>Hour: 0${i}</h3>
                             </label>
                         </div>
+
                         <div class='col-xs-12 col-md-8'>
                             <input type='text' class='form-control' data-hour='${i}' style='width:100%;'placeholder='Eat, sleep, code' minlength='2' maxlength='50'></input>
                         </div>
+
                         <div class='col-xs-12 col-md-2 pt-1'>
                             <button type='button' class='btn btn-primary create' data-hour='${i}'>Create</button>
                         </div>
                     </form>
+
                     <div class='row p-1 todos' data-hour='${i}'></div>
                 </div>`
             );   
@@ -34,19 +38,23 @@ $(function(){
             $("#timeBlocks").append(
                 `<div class='col-md-12 pb-2 my-3 mx-3 timeBlock' data-block='${i}' style='background: linear-gradient(#c3b0a52b, #ff6c00); border-radius:18px'>
                     <form class='form-inline m-2 p-2' id='activity-form'>
+
                         
 <div class='hourdiv col-xs-12 col-md-2'>
                             <label for='inlineFormInputName2'>
                                 <h3 class='hour mt-2 p-1'>Hour: 0${i}</h3>
                             </label>
                         </div>
+
                         <div class='col-xs-12 col-md-8'>
                             <input type='text' class='form-control' data-hour='${i}' style='width:100%;'placeholder='Eat, sleep, code' minlength='2' maxlength='50'></input>
                         </div>
+
                         <div class='col-xs-12 col-md-2 pt-1'>
                             <button type='button' class='btn btn-primary create' data-hour='${i}'>Create</button>
                         </div>
                     </form>
+
                     <div class='row p-1 todos' data-hour='${i}'></div>
                 </div>`
             );   
@@ -55,19 +63,23 @@ $(function(){
             $("#timeBlocks").append(
                 `<div class='col-md-12 pb-2 my-3 mx-3 timeBlock' data-block='${i}' style='background: linear-gradient(#c9cbeb4f, #4848e0); border-radius:18px'>
                     <form class='form-inline m-2 p-2' id='activity-form'>
+
                         
 <div class='hourdiv col-xs-12 col-md-2'>
                             <label for='inlineFormInputName2'>
                                 <h3 class='hour mt-2 p-1'>Hour: ${i}</h3>
                             </label>
                         </div>
+
                         <div class='col-xs-12 col-md-8'>
                             <input type='text' class='form-control' data-hour='${i}' style='width:100%;'placeholder='Eat, sleep, code' minlength='2' maxlength='50'></input>
                         </div>
+
                         <div class='col-xs-12 col-md-2 pt-1'>
                             <button type='button' class='btn btn-primary create' data-hour='${i}'>Create</button>
                         </div>
                     </form>
+
                     <div class='row p-1 todos' data-hour='${i}'></div>
                 </div>`
             );   
@@ -76,19 +88,23 @@ $(function(){
             $("#timeBlocks").append(
                 `<div class='col-md-12 pb-2 my-3 mx-3 timeBlock' data-block='${i}' style='background: linear-gradient(#c3b0a52b, #ff6c00); border-radius:18px'>
                     <form class='form-inline m-2 p-2' id='activity-form'>
+
                         
 <div class='hourdiv col-xs-12 col-md-2'>
                             <label for='inlineFormInputName2'>
                                 <h3 class='hour mt-2 p-1'>Hour: ${i}</h3>
                             </label>
                         </div>
+
                         <div class='col-xs-12 col-md-8'>
                             <input type='text' class='form-control' data-hour='${i}' style='width:100%;'placeholder='Eat, sleep, code' minlength='2' maxlength='50'></input>
                         </div>
+
                         <div class='col-xs-12 col-md-2 pt-1'>
                             <button type='button' class='btn btn-primary create' data-hour='${i}'>Create</button>
                         </div>
                     </form>
+
                     <div class='row p-1 todos' data-hour='${i}'></div>
                 </div>`
             );   
@@ -97,18 +113,22 @@ $(function(){
             $("#timeBlocks").append(
                 `<div class='col-md-12 pb-2 my-3 mx-3 timeBlock' data-block='${i}' style='background: linear-gradient(#d3c8c854, black); border-radius:18px'>
                     <form class='form-inline m-2 p-2' id='activity-form'>
+
                         <div class='hourdiv col-xs-12 col-md-2'>
                             <label for='inlineFormInputName2'>
                                 <h3 class='hour mt-2 p-1'>Hour: ${i}</h3>
                             </label>
                         </div>
+
                         <div class='col-xs-12 col-md-8'>
                             <input type='text' class='form-control' data-hour='${i}' style='width:100%;'placeholder='Eat, sleep, code' minlength='2' maxlength='50'></input>
                         </div>
+
                         <div class='col-xs-12 col-md-2 pt-1'>
                             <button type='button' class='btn btn-primary create' data-hour='${i}'>Create</button>
                         </div>
                     </form>
+
                     <div class='row p-1 todos' data-hour='${i}'></div>
                 </div>`
             );   
@@ -134,13 +154,15 @@ $(function(){
         // FIRST SAVE GLOBAL || FIRST SAVE PER HOUR
         if(!saved.length || !saved.includes(savedElement[0])){
             saved.push({"time": inputVal.attr("data-hour"), "activity" : [inputVal.val()]});
-            displayItem(buttonVal, inputVal.val())
+            // Specify the first item value, position in the activity array
+            displayItem(buttonVal, inputVal.val(), 0)
         }else{
             // IF THERE IS A PREVIOUS LOCAL SAVE AT THIS SPOT, ADD THE NEW ITEM TO IT
             saved.forEach(hour => {
                 if(hour.time == buttonVal && hour.activity.length){
                     hour.activity.push(inputVal.val());
-                    displayItem(buttonVal, inputVal.val())
+                    // Specify the latest item value and position in the activity array
+                    displayItem(buttonVal, inputVal.val(), hour.activity.length-1)
                 }
             })    
         }
@@ -148,6 +170,7 @@ $(function(){
         localStorage.setItem(date, JSON.stringify(saved));
         inputVal.val('')
     }
+
     // function colorBlocks(){
     //     let date = moment($('#dayPicked').text()).locale('fr').format('L');
     //     let currentHour = moment().hour();
@@ -200,12 +223,12 @@ $(function(){
         colorBlocks()
     }
 
-
     function removeActivity(){
         let date = moment($('#dayPicked').text()).locale('fr').format('L');
         let saved = JSON.parse(localStorage.getItem(date));
         let buttonHour = $(this).attr("data-hour");
         let buttonIndex = $(this).attr("data-index");
+
         saved.forEach((hour, i) => {
             if(hour.time == buttonHour){ 
                 // Remove element at buttonindex. 
