@@ -265,18 +265,10 @@ $(function(){
     })
 })
 
-let darkMode = document.querySelector("#darkMode");
-let b = document.querySelector("body");
-let fm = document.querySelector("#dayPicked");
-darkMode.addEventListener('click', () => {
-    if(darkMode.innerText == "Enable Dark Mode") {
-        darkMode.innerText = "Enable Light Mode";
-        b.style.backgroundColor = "#2F3032";
-        fm.style.backgroundColor = "yellow";
-    }
-    else {
-        darkMode.innerText = "Enable Dark Mode";
-        b.style.backgroundColor = "white";
-        fm.style.backgroundColor = "yellow";
-    }
-});
+
+
+
+const checkbox = document.getElementById("checkbox")
+checkbox.addEventListener("change", () => {
+  document.body.classList.toggle("dark")
+})
