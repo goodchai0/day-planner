@@ -1,4 +1,3 @@
-
 # DAY-PLANNER
 
 Day planner is a website designed to help you schedule your day.
