@@ -16,7 +16,7 @@ $(function(){
 
                         <div class='col-xs-12 col-md-2'>
                             <label for='inlineFormInputName2'>
-                                <h3 class='mt-2 p-1'>Hour: ${'0' + i}</h3>
+                            <input type='text' class='mt-2 p-1'  style='width:100%;'placeholder='Enter Time' minlength='2' maxlength='50'></input>
                             </label>
                         </div>
 
@@ -40,7 +40,9 @@ $(function(){
 
                         <div class='col-xs-12 col-md-2'>
                             <label for='inlineFormInputName2'>
-                                <h3 class='mt-2 p-1'>Hour: ${'0' + i}</h3>
+                                
+                                <input type='text' class='mt-2 p-1'  style='width:100%;'placeholder='Enter Time' minlength='2' maxlength='50'></input>
+
                             </label>
                         </div>
 
@@ -64,7 +66,7 @@ $(function(){
 
                         <div class='col-xs-12 col-md-2'>
                             <label for='inlineFormInputName2'>
-                                <h3 class='mt-2 p-1'>${i < 10 ? '0' + i : i}:00 Hr</h3>
+                            <input type='text' class='mt-2 p-1'  style='width:100%;'placeholder='Enter Time' minlength='2' maxlength='50'></input>
                             </label>
                         </div>
 
@@ -88,7 +90,7 @@ $(function(){
 
                         <div class='col-xs-12 col-md-2'>
                             <label for='inlineFormInputName2'>
-                                <h3 class='mt-2 p-1'>Hour: ${i}</h3>
+                            <input type='text' class='mt-2 p-1'  style='width:100%;'placeholder='Enter Time' minlength='2' maxlength='50'></input>
                             </label>
                         </div>
 
@@ -112,7 +114,7 @@ $(function(){
 
                         <div class='col-xs-12 col-md-2'>
                             <label for='inlineFormInputName2'>
-                                <h3 class='mt-2 p-1'>Hour: ${i}</h3>
+                            <input type='text' class='mt-2 p-1'  style='width:100%;'placeholder='Enter Time' minlength='2' maxlength='50'></input>
                             </label>
                         </div>
 
