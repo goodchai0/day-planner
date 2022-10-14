@@ -136,9 +136,9 @@ $(function(){
 
         if(localStorage.getItem(date)){
             refreshItems()
-        }else{
+        }/*else{
             colorBlocks()
-        }
+        }*/
     }
 
     function addActivity() {
