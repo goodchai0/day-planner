@@ -35,7 +35,6 @@ Clone the project
 git clone https://github.com/goodchai0/day-planner.git
 ```
 - run the index.html on your browser.
-- It run's on the port 5500 on your local machine
 
 
 
