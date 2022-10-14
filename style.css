@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Amatic+SC&family=Dancing+Script&family=Great+Vibes&family=Poppins:wght@100&family=Shadows+Into+Light&display=swap');
+
 body{
   font-family:'Fredoka One', cursive;
   font-family: 'Space Mono', monospace;
@@ -34,6 +36,11 @@ h3 {
   border-bottom: 10px solid black;
  
 }
+.btn_back{
+  align-items: center;
+  display: flex;
+  justify-content: center;
+}
 
 .todos {
   border-top: 1px solid white;
@@ -44,6 +51,84 @@ h3 {
 .timeBlock {
   border-radius: 5px;
 
+}
+
+footer{
+ 
+  margin: 12px 10px;
+}
+
+
+.footer-content {
+  border-radius: 15px;
+  width: 100%;
+}
+
+.footer-content {
+  background-color: rgb(32, 31, 31);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+}
+
+.footer-content  
+.footer-heading{
+  color: white;
+  margin-top: 15px;
+  font-size: 2rem;
+  font-weight: 400;
+  font-family: 'Shadows Into Light', cursive;
+  margin-bottom: 0px;
+  padding-bottom: 0px;
+}
+
+.footer-content 
+.footer-paragraph {
+  max-width: 500px;
+  color: white;
+  text-align: center;
+  line-height: 20px;
+  margin-top: 10px;
+  font-size: 18px;
+}
+
+.media {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.media li {
+  margin: 0 10px;
+}
+
+.media a {
+  text-decoration: none;
+  color: white;
+}
+
+.media a i {
+  font-size: 2rem;
+}
+
+.media a:hover {
+  color: rgb(9, 158, 232);
+}
+
+.footer-bottom {
+  text-align: center;
+  margin: 10px 0px;
+  color: white;
+}
+
+.footer-bottom span {
+  color: rgb(9, 158, 232);
+  font-family : 'Shadows Into Light', cursive;
+  font-weight: 500;
 }
 
 
