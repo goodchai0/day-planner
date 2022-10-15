@@ -227,20 +227,22 @@ $(function(){
         let date = moment($('#dayPicked').text()).locale('fr').format('L');
         let saved = JSON.parse(localStorage.getItem(date));
         let buttonHour = $(this).attr("data-hour");
-        let buttonIndex = $(this).attr("data-index");
+        let buttonIndx = $(this).attr("data-index");
 
         saved.forEach((hour, i) => {
             if(hour.time == buttonHour){ 
-                // Remove element at buttonindex. 
-                // Button index holds the element positon in the array for which delete was clicked for that hour
-                hour.activity.splice(buttonIndex, 1);
+                
+                // Button index holds the element positon in the array for which delete was clicked for that  hour
+                // This removes 1 string from index = buttonIndx
+                hour.activity.splice(buttonIndx, 1);
+                
                 // IF LAST ACTIVITY IN ARR, REMOVE ARR SO IT PLAYS NICE IN addActivity FUNC
                 if(hour.activity.length === 0){
                     saved.splice(i, 1)
                 }
             }
         });
-       
+    
         localStorage.setItem(date, JSON.stringify(saved));
         refreshItems()
     }
