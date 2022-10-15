@@ -58,6 +58,10 @@ p{
   width: 100%;
 }
 
+
+
+
+
 .jumbotron {
   text-align: center;
   background-image: linear-gradient(
@@ -75,6 +79,10 @@ p{
   border-radius: 0;
   border-bottom: 10px solid black;
  
+}
+
+.darkmode{
+  box-shadow:2px 2px 5px white;
 }
 
 .todos {
@@ -96,8 +104,21 @@ p{
   font-weight: bold;
   align-items: center;
   border-radius: 50px;
+  box-shadow:5px 5px 7px black;
 
 }
+
+#dayEarlier:hover{
+  background:orangered;
+  box-shadow: 5px 5px 12px blue;
+  inset: none;
+}
+
+#dayLater:hover{
+  background: orangered;
+  box-shadow: 5px 5px 12px blue;
+}
+
 #dayEarlier,
 #dayLater {
   font-weight: bold;
@@ -149,6 +170,8 @@ p{
       font-size: 30%;
   }
 }
+
+
 
 @media only screen and (min-width: 200px) and (max-width: 430px) {
   .display-3 {
