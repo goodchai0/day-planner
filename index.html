@@ -1,6 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <!------------------------SCROLL TO TOP - Made by ANUPESH KUMAR VERMA - HACKTOBER FEST 2022------------------------>
+
+	<!-- Font Awesome -->
+	<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+	rel="stylesheet"/>
+
+	<!-- Google Fonts -->
+	<link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap"
+	rel="stylesheet"/>
+
+	<!-- MDB -->
+	<link href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/5.0.0/mdb.min.css"
+	rel="stylesheet"/>
+
+	<!-- MDB -->
+	<script	type="text/javascript" 	src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/5.0.0/mdb.min.js" ></script>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- <link type="image/x-icon" rel="shortcut icon" href="./images/clippy.png" /> //image is not available -->
@@ -40,10 +56,10 @@
           <a class="nav-link" href="#header">Home <span class="sr-only">(current)</span></a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#footer">Bottom</a>
+          <a class="nav-link" href="#footer" title="Go to bottom">Bottom</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#darkMode">Dark-Mode</a>
+          <a class="nav-link" href="#darkMode" title="switch to dark mode">Dark-Mode</a>
         </li>
       </ul>
       <span class="navbar-text">
@@ -93,7 +109,7 @@
       <div class="col-xs-12 col-md-12 pb-2 pt-3 datePicker">
         <div class="row">
           <div class="col-md-2 mb-2">
-            <button type="button" class="btn btn-warning" style="width: 100%" id="dayEarlier">
+            <button type="button" class="btn btn-warning" style="width: 100%" id="dayEarlier" title="go to previous day">
               &lt;
             </button>
           </div>
@@ -101,7 +117,7 @@
             <div style="background-color: yellow; width: 100%" class="btn" id="dayPicked"></div>
           </div>
           <div class="col-md-2 mb-2">
-            <button type="button" class="btn btn-warning" style="width: 100%" id="dayLater">
+            <button type="button" class="btn btn-warning" style="width: 100%" id="dayLater" title="go to next day">
               &gt;
             </button>
           </div>
@@ -109,7 +125,7 @@
       </div>
     </div>
     <div class="row mb-3" id="timeBlocks"></div>
-   
+
   </div>
   <div class="btn_back"> 
     <a href="#" class="goToTop"><button type="button" class="btn btn-primary btn-lg">Back to
@@ -149,6 +165,53 @@
     crossorigin="anonymous"></script>
   <script src="script.js"></script>
   <!-- script end -->
+    
+    <!------------------------SCROLL TO TOP - Made by ANUPESH KUMAR VERMA - HACKTOBER FEST 2022------------------------>
+
+	<button type="button" class="btn btn-warning btn-xs" id="btn-back-to-top" title="back to top">
+  		<i class="fas fa-arrow-circle-up"> T O P</i>
+	</button>
+
+	<style>
+		#btn-back-to-top 
+		{
+		position: fixed;
+		bottom: 80px;
+		size: 10px;
+		right: 10px;
+		display: none;
+		color: azure;
+		}
+	</style>
+
+	<script>	
+		//Get the button
+		let mybutton = document.getElementById("btn-back-to-top");
+
+		// When the user scrolls down 20px from the top of the document, show the button
+		window.onscroll = function () {
+		scrollFunction();
+		};
+
+		function scrollFunction() {
+		if (
+		document.body.scrollTop > 0 ||
+		document.documentElement.scrollTop > 0
+		) {
+		mybutton.style.display = "block";
+		} else {
+		mybutton.style.display = "none";
+		}
+		}
+		// When the user clicks on the button, scroll to the top of the document
+		mybutton.addEventListener("click", backToTop);
+
+		function backToTop() {
+		document.body.scrollTop = 0;
+		document.documentElement.scrollTop = 0;
+		}
+	</script>
 </body>
 
 </html>
+

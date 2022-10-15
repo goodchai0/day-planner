@@ -19,6 +19,10 @@ h3 {
   width: 100%;
 }
 
+
+
+
+
 .jumbotron {
   text-align: center;
   background-image: linear-gradient(
@@ -41,6 +45,10 @@ h3 {
   align-items: center;
   display: flex;
   justify-content: center;
+}
+
+.darkmode{
+  box-shadow:2px 2px 5px white;
 }
 
 .todos {
@@ -140,8 +148,21 @@ footer{
   font-weight: bold;
   align-items: center;
   border-radius: 50px;
+  box-shadow:5px 5px 7px black;
 
 }
+
+#dayEarlier:hover{
+  background:orangered;
+  box-shadow: 5px 5px 12px blue;
+  inset: none;
+}
+
+#dayLater:hover{
+  background: orangered;
+  box-shadow: 5px 5px 12px blue;
+}
+
 #dayEarlier,
 #dayLater {
   font-weight: bold;
@@ -151,6 +172,8 @@ footer{
   font-weight: bold;
   border-radius: 8px;
 }
+
+
 
 @media only screen and (min-width: 200px) and (max-width: 430px) {
   .display-3 {
