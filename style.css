@@ -46,6 +46,27 @@ h3 {
   display: flex;
   justify-content: center;
 }
+.btn_back a{
+    background-color: rgb(41, 102, 245);
+    color: white;
+    border: 1px solid black;
+    border-radius: 10px;
+    margin: 5px;
+    padding: 4px;
+    font-size: 1.5rem;
+    text-decoration: none;
+    
+}
+
+.btn_back a:hover{
+    background-color: rgb(125, 182, 248);
+    font-size: 25px;
+    border: 2px solid white;
+    color: black;
+    transition: .2s;
+    transform: scale(1.1);
+    box-shadow: 0 0 15px #fff;
+}
 
 .darkmode{
   background-color: #2F3032;
@@ -173,6 +194,7 @@ footer{
   font-weight: bold;
   border-radius: 8px;
 }
+
 
 
 
