@@ -26,6 +26,42 @@
     <title>Work Day Scheduler</title>
   </head>
 
+
+<body>
+  <!--NavBar-->
+  <nav class="navbar  navbar-fixed-top navbar-expand-lg navbar-dark bg-danger ">
+    <a class="navbar-brand" href="#">WORK DAY SCHEDULAR</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarText">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item active">
+          <a class="nav-link" href="#header">Home <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#footer">Bottom</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#darkMode">Dark-Mode</a>
+        </li>
+      </ul>
+      <span class="navbar-text">
+        The Tool Of New Age
+      </span>
+    </div>
+  </nav>
+
+  <!--NavBar ends-->
+  <!-- header start -->
+  <header class="jumbotron" id="header">
+    <h1 class="display-3">Work Day Scheduler</h1>
+    <p class="lead">A simple calendar app for scheduling your work day</p>
+    <p id="currentDay" class="lead"></p>
+    <p class="lead"><button class="btn btn-danger" id="darkMode">Enable Dark Mode</button></p>
+  </header>
+  <!-- header end -->
+
   <body>
     <header class="jumbotron">
       <div class="waviy">
@@ -51,6 +87,7 @@
       <p ><button class="btn btn-danger" id="darkMode">Enable Dark Mode</button> </p>
     </header>
 
+
   <div class="container">
     <div class="row justify-content-md-center">
       <div class="col-xs-12 col-md-12 pb-2 pt-3 datePicker">
@@ -72,7 +109,6 @@
       </div>
     </div>
     <div class="row mb-3" id="timeBlocks"></div>
-
    
   </div>
   <div class="btn_back"> 
@@ -97,8 +133,7 @@
       <div class="footer-bottom">
         <p>copyright &copy;2022 Work Day Scheduler. designed by <span>Amit Kumar</span></p>
     </div>
-  
-  </div>
+
 
   </footer>
   <!-- footer end -->
