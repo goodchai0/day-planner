@@ -38,8 +38,8 @@ h3 {
   
   color: white;
   border-radius: 0;
-  border-bottom: 10px solid black;
- 
+  margin-bottom: 50px ;
+
 }
 .btn_back{
   align-items: center;
@@ -48,12 +48,13 @@ h3 {
 }
 
 .darkmode{
-  box-shadow:2px 2px 5px white;
+  background-color: #2F3032;
+
 }
 
 .todos {
   border-top: 1px solid white;
- 
+
 }
 
 .datePicker,

@@ -265,18 +265,41 @@ $(function(){
     })
 })
 
-let darkMode = document.querySelector("#darkMode");
+
+
+
+//* Dark mode implementation 
+
+let darkMode = document.querySelectorAll(".darkModeBtn");
 let b = document.querySelector("body");
 let fm = document.querySelector("#dayPicked");
-darkMode.addEventListener('click', () => {
-    if(darkMode.innerText == "Enable Dark Mode") {
-        darkMode.innerText = "Enable Light Mode";
-        b.style.backgroundColor = "#2F3032";
-        fm.style.backgroundColor = "yellow";
+
+
+const changeTextToLight = () => {
+    darkMode.forEach(ele =>{
+        ele.innerText = "ENABLE LIGHT MODE"
+    })
+}
+
+const changeTextToDark = () => {
+    darkMode.forEach(ele =>{
+        ele.innerText = "ENABLE DARK MODE"
+    })
+}
+
+darkMode.forEach( ele =>{
+        ele.addEventListener('click', () => {
+
+        console.log(ele.innerText);
+        if(ele.innerText == "ENABLE DARK MODE") {
+            changeTextToLight();
+            b.classList.add('darkmode');
+
+        }
+        else {
+            changeTextToDark();
+            b.classList.remove('darkmode')
+        }
+    });
     }
-    else {
-        darkMode.innerText = "Enable Dark Mode";
-        b.style.backgroundColor = "white";
-        fm.style.backgroundColor = "yellow";
-    }
-});
+);
