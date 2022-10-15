@@ -1,7 +1,7 @@
 
 # DAY-PLANNER
 
-Hey! Day planner is a website designed to help you schedule your day. 
+Hey! DAY-PLANNER is a website designed to help you schedule your day. 
 So, get ready to plan your day with DAY-PLANNER.
 
 Manage your work and life efficiently with DAY-PLANNER.
