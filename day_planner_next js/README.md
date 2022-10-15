@@ -1,8 +1,15 @@
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
+#Project Preview
+![web screenshot](https://github.com/palhimalaya/Day_Planner_Nextjs/blob/main/public/workday%20planner.png)
 
 First, run the development server:
+```bash
+    npm install
+    # and
+    npm run dev
+```
 
 ```bash
 npm run dev
