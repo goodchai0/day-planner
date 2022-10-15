@@ -154,13 +154,15 @@ $(function(){
         // FIRST SAVE GLOBAL || FIRST SAVE PER HOUR
         if(!saved.length || !saved.includes(savedElement[0])){
             saved.push({"time": inputVal.attr("data-hour"), "activity" : [inputVal.val()]});
-            displayItem(buttonVal, inputVal.val())
+            // Specify the first item value, position in the activity array
+            displayItem(buttonVal, inputVal.val(), 0)
         }else{
             // IF THERE IS A PREVIOUS LOCAL SAVE AT THIS SPOT, ADD THE NEW ITEM TO IT
             saved.forEach(hour => {
                 if(hour.time == buttonVal && hour.activity.length){
                     hour.activity.push(inputVal.val());
-                    displayItem(buttonVal, inputVal.val())
+                    // Specify the latest item value and position in the activity array
+                    displayItem(buttonVal, inputVal.val(), hour.activity.length-1)
                 }
             })    
         }
@@ -229,9 +231,9 @@ $(function(){
 
         saved.forEach((hour, i) => {
             if(hour.time == buttonHour){ 
-                //search in arr for element with current index
-                let index = hour.activity.findIndex(el => el === buttonIndex);
-                hour.activity.splice(index, 1);
+                // Remove element at buttonindex. 
+                // Button index holds the element positon in the array for which delete was clicked for that hour
+                hour.activity.splice(buttonIndex, 1);
                 // IF LAST ACTIVITY IN ARR, REMOVE ARR SO IT PLAYS NICE IN addActivity FUNC
                 if(hour.activity.length === 0){
                     saved.splice(i, 1)
