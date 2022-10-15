@@ -1,13 +1,12 @@
 
 # DAY-PLANNER
 
-Day planner is a website designed to help you schedule your day.
+Hey! Day planner is a website designed to help you schedule your day. 
+So, get ready to plan your day with DAY-PLANNER.
 
-So, get ready to plan you day with day-planner.
+Manage your work and life efficiently with DAY-PLANNER.
 
-Manage you work and life efficiently in one place.
-
-With day-planner you never miss out your daily meetings or any other impactful tasks. Write down all your work and life related chores in an organized way at one place. Get you day organized in seconds.
+With DAY-PLANNER you never miss any of your meetings and any other important tasks. Write down all your work and life related tasks in an organized way with DAY-PLANNER. Get your day organized in seconds.
 
 
 ## Tech Stack
