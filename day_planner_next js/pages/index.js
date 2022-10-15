@@ -3,42 +3,45 @@ import Image from "next/image";
 import styles from "../styles/Home.module.css";
 import { useEffect, useState } from "react";
 import { BsFillMoonStarsFill, BsFillSunFill } from "react-icons/bs";
-import Cookies from "js-cookie";
 
-export default function Home({ entries }) {
+export default function Home() {
   const [darkMode, setDarkMode] = useState(false);
-  const [entry, setEntry] = useState(entries || []);
+  const [entry, setEntry] = useState([]);
   const [events, setEvents] = useState("");
   const [time, setTime] = useState("");
 
   const handleSetEntries = async (e) => {
-    setEntry([
+    let entries = [
       ...entry,
       {
         id: entry.length + 1,
         events: events,
         time: time,
       },
-    ]);
-
+    ];
+    setEntry(entries);
+    localStorage.setItem("entries", JSON.stringify(entries));
     handleReset();
   };
 
   const handleDelete = (id) => {
-    setEntry(entry.filter((item) => item.id !== id));
+    let entries = entry.filter((item) => item.id !== id);
+    setEntry(entries);
+    localStorage.setItem("entries", JSON.stringify(entries));
   };
 
   const handleReset = () => {
     setEvents("");
     setTime("");
   };
-  useEffect(() => {
-    Cookies.set("entries", JSON.stringify(entry));
-  }, []);
+  const setData = () => {
+    setEntry(JSON.parse(localStorage.getItem("entries")) || []);
+  };
+
   //set entries to cookie
   useEffect(() => {
-    Cookies.set("entries", JSON.stringify(entry));
-  }, [entry]);
+    setData();
+  }, []);
 
   const getDate = () => {
     const monthNames = [
@@ -186,12 +189,4 @@ export default function Home({ entries }) {
       </main>
     </div>
   );
-}
-
-export function getServerSideProps({ req, res }) {
-  return {
-    props: {
-      entries: JSON.parse(decodeURIComponent(req.cookies.entries)) || [],
-    },
-  };
 }
