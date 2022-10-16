@@ -12,8 +12,6 @@ With `day-planner` you never miss out your daily meetings or any other impactful
 
 <img width="938" alt="image" src="https://user-images.githubusercontent.com/89184573/195405940-bf32f3bb-efcc-44e2-befa-a5bd96a66fb6.png">
 
-* One of the important feature present in our website is the `DARK MODE`. So, plan your day with less strain.
-
 # Contributors
 <br>
 <h1 align="center">
@@ -22,3 +20,7 @@ With `day-planner` you never miss out your daily meetings or any other impactful
 <a href="https://github.com/goodchai0/day-planner/graphs/contributors">
   <img src="https://contrib.rocks/image?repo=goodchai0/day-planner&&max=817" />
 </a>
+
+## <h5 align="left"> One of the important feature present in our website is the `DARK MODE`. So, plan your day with less strain. <\h5>
+
+
