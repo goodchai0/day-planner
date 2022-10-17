@@ -86,7 +86,8 @@ h3 {
 }
 
 footer{
- 
+  box-shadow: 2px 2px 13px black;
+  border-radius: 15px;
   margin: 12px 10px;
 }
 
