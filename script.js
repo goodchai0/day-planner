@@ -277,6 +277,8 @@ $(function(){
 let darkMode = document.querySelectorAll(".darkModeBtn");
 let b = document.querySelector("body");
 let fm = document.querySelector("#dayPicked");
+let c= document.querySelector("#img");
+
 
 
 const changeTextToLight = () => {
@@ -298,12 +300,17 @@ darkMode.forEach( ele =>{
         if(ele.innerText == "ENABLE DARK MODE") {
             changeTextToLight();
             b.classList.add('darkmode');
+            c.src="images/4457753.png";
+           
 
         }
-        else {
+        else  {
             changeTextToDark();
             b.classList.remove('darkmode')
+            c.src="images/diary_illustration.jpg"
+           
         }
     });
     }
 );
+
