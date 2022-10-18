@@ -49,6 +49,19 @@ h3 {
   font-weight: bold;
 }
 
-.btn-primary{
-  font-weight: bold;
+.button{
+    background: none;
+    color:#ffa260;
+    border:2px solid;
+    padding:1em 2em;
+    font-size:1em;
+    transition:color 0.25s, background-color 0.25s,box-shadow 0.25s,transform 0.25s, border-color 0.25s;
+}
+.button:hover{
+    border-color:#f1ff5c;
+    color:rgb(7, 8, 0);
+    box-shadow:0 0.5em 0.5em -0.4em #f1ff5c;
+    transform:translateY(-0.1em);
+    cursor:pointer;
+
 }

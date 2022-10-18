@@ -21,11 +21,11 @@ $(function(){
                         </div>
 
                         <div class='col-xs-12 col-md-8'>
-                            <input type='text' class='form-control' data-hour='${i}' style='width:100%;'placeholder='Eat, sleep, code' minlength='2' maxlength='50'></input>
+                            <input type='text' class='form-control' data-hour='${i}' style='width:100%;'placeholder='Eat, sleep, code ,repeat' minlength='2' maxlength='50'></input>
                         </div>
 
                         <div class='col-xs-12 col-md-2 pt-1'>
-                            <button type='button' class='btn btn-primary create' data-hour='${i}'>Create</button>
+                            <button type='button' class='button create' data-hour='${i}'>Create</button>
                         </div>
                     </form>
 
@@ -80,7 +80,7 @@ $(function(){
                 colorCode = 'rgba(0,128,0, 0.8);';
             }else{
                 if($(this).attr('data-block') == currentHour){
-                    colorCode = 'rgba(255,255,0, 0.8);';
+                    colorCode = 'rgba(0,0,255, 0.8);';
                 }
                 if($(this).attr('data-block') > currentHour){
                     colorCode = 'rgba(0,128,0, 0.8);';
