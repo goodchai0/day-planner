@@ -22,11 +22,11 @@ $(function(){
                         </div>
 
                         <div class='col-xs-12 col-md-8'>
-                            <input type='text' class='form-control' data-hour='${i}' style='width:100%;'placeholder='Eat, sleep, code' minlength='2' maxlength='50'></input>
+                            <input type='text' class='form-control' data-hour='${i}' id='work' style='width:100%;'placeholder='Eat, sleep, code' minlength='2' maxlength='50'></input>
                         </div>
 
                         <div class='col-xs-12 col-md-2 pt-1'>
-                            <button type='button' class='btn btn-primary create' data-hour='${i}'>Create</button>
+                            <button type='button' class='btn btn-primary create' id='btn-submit' data-hour='${i}'>Create</button>
                         </div>
                     </form>
 
@@ -47,11 +47,11 @@ $(function(){
                         </div>
 
                         <div class='col-xs-12 col-md-8'>
-                            <input type='text' class='form-control' data-hour='${i}' style='width:100%;'placeholder='Eat, sleep, code' minlength='2' maxlength='50'></input>
+                            <input type='text' class='form-control' id='work' data-hour='${i}' style='width:100%;'placeholder='Eat, sleep, code' minlength='2' maxlength='50'></input>
                         </div>
 
                         <div class='col-xs-12 col-md-2 pt-1'>
-                            <button type='button' class='btn btn-primary create' data-hour='${i}'>Create</button>
+                            <button type='button' class='btn btn-primary create' id='btn-submit' data-hour='${i}'>Create</button>
                         </div>
                     </form>
 
@@ -72,11 +72,11 @@ $(function(){
                         </div>
 
                         <div class='col-xs-12 col-md-8'>
-                            <input type='text' class='form-control' data-hour='${i}' style='width:100%;'placeholder='Eat, sleep, code' minlength='2' maxlength='50'></input>
+                            <input type='text' class='form-control' id='work' data-hour='${i}' style='width:100%;'placeholder='Eat, sleep, code' minlength='2' maxlength='50'></input>
                         </div>
 
                         <div class='col-xs-12 col-md-2 pt-1'>
-                            <button type='button' class='btn btn-primary create' data-hour='${i}'>Create</button>
+                            <button type='button' class='btn btn-primary create' id='btn-submit' data-hour='${i}'>Create</button>
                         </div>
                     </form>
 
@@ -97,11 +97,11 @@ $(function(){
                         </div>
 
                         <div class='col-xs-12 col-md-8'>
-                            <input type='text' class='form-control' data-hour='${i}' style='width:100%;'placeholder='Eat, sleep, code' minlength='2' maxlength='50'></input>
+                            <input type='text' class='form-control' data-hour='${i}' id='work' style='width:100%;'placeholder='Eat, sleep, code' minlength='2' maxlength='50'></input>
                         </div>
 
                         <div class='col-xs-12 col-md-2 pt-1'>
-                            <button type='button' class='btn btn-primary create' data-hour='${i}'>Create</button>
+                            <button type='button' class='btn btn-primary create' id='btn-submit' data-hour='${i}'>Create</button>
                         </div>
                     </form>
 
@@ -121,11 +121,11 @@ $(function(){
                         </div>
 
                         <div class='col-xs-12 col-md-8'>
-                            <input type='text' class='form-control' data-hour='${i}' style='width:100%;'placeholder='Eat, sleep, code' minlength='2' maxlength='50'></input>
+                            <input type='text' class='form-control' id='work' data-hour='${i}' style='width:100%;'placeholder='Eat, sleep, code' minlength='2' maxlength='50'></input>
                         </div>
 
                         <div class='col-xs-12 col-md-2 pt-1'>
-                            <button type='button' class='btn btn-primary create' data-hour='${i}'>Create</button>
+                            <button type='button' class='btn btn-primary create' id='btn-submit' data-hour='${i}'>Create</button>
                         </div>
                     </form>
 
@@ -133,6 +133,14 @@ $(function(){
                 </div>`
             );   
         }
+         //Enter functionalty
+        let input = document.getElementById("work");
+        input.addEventListener("keydown", (event) => {
+            if (event.key === "Enter") {
+                event.preventDefault();
+                document.getElementById("btn-submit").click();
+            }
+        });
 
         if(localStorage.getItem(date)){
             refreshItems()
