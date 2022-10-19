@@ -1,15 +1,15 @@
-$(function(){
+$(function () {
     const immutableToday = moment();
     let today = moment();
 
-    function generateView(){
+    function generateView() {
         $("#dayPicked").text(today.format('LL'));
         //CURRENT DATE HEADER
         $("#currentDay").text(immutableToday.format('LL'));
         // CREATE DATE STRING DD/MM/YYYY, FOR USE AS STORAGE KEY
         let date = moment($('#dayPicked').text()).locale('fr').format('L');
         // DYNAMICALLY CREATE TIMEBLOCKS
-        for(let i = 0; i < 5; i++){
+        for (let i = 0; i < 5; i++) {
             $("#timeBlocks").append(
                 `<div class='col-md-12 pb-2 my-3 mx-3  timeBlock' data-block='${i}' style='background: linear-gradient(#d3c8c854, black); border-radius:18px'>
                     <form class='form-inline m-2 p-2' id='activity-form'>
@@ -32,9 +32,9 @@ $(function(){
 
                     <div class='row p-1 todos' data-hour='${i}'></div>
                 </div>`
-            );   
+            );
         }
-        for(let i = 5; i < 10; i++){
+        for (let i = 5; i < 10; i++) {
             $("#timeBlocks").append(
                 `<div class='col-md-12 pb-2 my-3 mx-3 timeBlock' data-block='${i}' style='background: linear-gradient(#c3b0a52b, #ff6c00); border-radius:18px'>
                     <form class='form-inline m-2 p-2' id='activity-form'>
@@ -57,9 +57,9 @@ $(function(){
 
                     <div class='row p-1 todos' data-hour='${i}'></div>
                 </div>`
-            );   
+            );
         }
-        for(let i = 10; i < 18; i++){
+        for (let i = 10; i < 18; i++) {
             $("#timeBlocks").append(
                 `<div class='col-md-12 pb-2 my-3 mx-3 timeBlock' data-block='${i}' style='background: linear-gradient(#c9cbeb4f, #4848e0); border-radius:18px'>
                     <form class='form-inline m-2 p-2' id='activity-form'>
@@ -82,9 +82,9 @@ $(function(){
 
                     <div class='row p-1 todos' data-hour='${i}'></div>
                 </div>`
-            );   
+            );
         }
-        for(let i = 18; i < 21; i++){
+        for (let i = 18; i < 21; i++) {
             $("#timeBlocks").append(
                 `<div class='col-md-12 pb-2 my-3 mx-3 timeBlock' data-block='${i}' style='background: linear-gradient(#c3b0a52b, #ff6c00); border-radius:18px'>
                     <form class='form-inline m-2 p-2' id='activity-form'>
@@ -107,9 +107,9 @@ $(function(){
 
                     <div class='row p-1 todos' data-hour='${i}'></div>
                 </div>`
-            );   
+            );
         }
-        for(let i = 21; i < 24; i++){
+        for (let i = 21; i < 24; i++) {
             $("#timeBlocks").append(
                 `<div class='col-md-12 pb-2 my-3 mx-3 timeBlock' data-block='${i}' style='background: linear-gradient(#d3c8c854, black); border-radius:18px'>
                     <form class='form-inline m-2 p-2' id='activity-form'>
@@ -131,9 +131,9 @@ $(function(){
 
                     <div class='row p-1 todos' data-hour='${i}'></div>
                 </div>`
-            );   
+            );
         }
-         //Enter functionalty
+        //Enter functionalty
         let input = document.getElementById("work");
         input.addEventListener("keydown", (event) => {
             if (event.key === "Enter") {
@@ -142,7 +142,7 @@ $(function(){
             }
         });
 
-        if(localStorage.getItem(date)){
+        if (localStorage.getItem(date)) {
             refreshItems()
         }/*else{
             colorBlocks()
@@ -155,24 +155,24 @@ $(function(){
         let buttonVal = $(this).attr("data-hour");
         let inputVal = $(`input[data-hour=${buttonVal}]`);
         // NO EMPTY INPUTS
-        if(inputVal.val() == ''){
+        if (inputVal.val() == '') {
             return;
         }
         let savedElement = saved.filter(hour => hour.time == buttonVal);
         // FIRST SAVE GLOBAL || FIRST SAVE PER HOUR
-        if(!saved.length || !saved.includes(savedElement[0])){
-            saved.push({"time": inputVal.attr("data-hour"), "activity" : [inputVal.val()]});
+        if (!saved.length || !saved.includes(savedElement[0])) {
+            saved.push({ "time": inputVal.attr("data-hour"), "activity": [inputVal.val()] });
             // Specify the first item value, position in the activity array
             displayItem(buttonVal, inputVal.val(), 0)
-        }else{
+        } else {
             // IF THERE IS A PREVIOUS LOCAL SAVE AT THIS SPOT, ADD THE NEW ITEM TO IT
             saved.forEach(hour => {
-                if(hour.time == buttonVal && hour.activity.length){
+                if (hour.time == buttonVal && hour.activity.length) {
                     hour.activity.push(inputVal.val());
                     // Specify the latest item value and position in the activity array
-                    displayItem(buttonVal, inputVal.val(), hour.activity.length-1)
+                    displayItem(buttonVal, inputVal.val(), hour.activity.length - 1)
                 }
-            })    
+            })
         }
 
         localStorage.setItem(date, JSON.stringify(saved));
@@ -183,7 +183,7 @@ $(function(){
     //     let date = moment($('#dayPicked').text()).locale('fr').format('L');
     //     let currentHour = moment().hour();
     //     let colorCode = ' #ED2939';
-        
+
     //     $('.timeBlock').each(function(){
     //         if(moment(date).isBefore(moment(immutableToday).locale('fr').format('L'))){
     //         }else if(moment(date).isAfter(moment(immutableToday).locale('fr').format('L'))){
@@ -199,9 +199,9 @@ $(function(){
     //         $(this).attr('style', `background-color:${colorCode};`)
     //     })
     // }
-    
+
     // DYNAMICALLY CREATE TODO ITEMS & CORRESPONDING DELETE BUTTONS
-    function displayItem(btn, val, index){
+    function displayItem(btn, val, index) {
         $(`div[data-hour=${btn}]`).append(
 
             `<div class='col-xs-12 col-md-2 mt-2'>
@@ -216,45 +216,45 @@ $(function(){
         $(`button[data-value='${val}']`).on("click", removeActivity);
     }
 
-    function refreshItems(){
-        let date=moment($('#dayPicked').text()).locale('fr').format('L');
-        let saved=JSON.parse(localStorage.getItem(date));
+    function refreshItems() {
+        let date = moment($('#dayPicked').text()).locale('fr').format('L');
+        let saved = JSON.parse(localStorage.getItem(date));
         $(".todos").html('')
 
-        if(saved){
-            saved.forEach(hour=>{
-                hour.activity.forEach((activity,index)=>{
-                    displayItem(hour.time,activity, index)
+        if (saved) {
+            saved.forEach(hour => {
+                hour.activity.forEach((activity, index) => {
+                    displayItem(hour.time, activity, index)
                 })
             })
         }
         colorBlocks()
     }
 
-    function removeActivity(){
+    function removeActivity() {
         let date = moment($('#dayPicked').text()).locale('fr').format('L');
         let saved = JSON.parse(localStorage.getItem(date));
         let buttonHour = $(this).attr("data-hour");
         let buttonIndx = $(this).attr("data-index");
 
         saved.forEach((hour, i) => {
-            if(hour.time == buttonHour){ 
-                
+            if (hour.time == buttonHour) {
+
                 // Button index holds the element positon in the array for which delete was clicked for that  hour
                 // This removes 1 string from index = buttonIndx
                 hour.activity.splice(buttonIndx, 1);
-                
+
                 // IF LAST ACTIVITY IN ARR, REMOVE ARR SO IT PLAYS NICE IN addActivity FUNC
-                if(hour.activity.length === 0){
+                if (hour.activity.length === 0) {
                     saved.splice(i, 1)
                 }
             }
         });
-    
+
         localStorage.setItem(date, JSON.stringify(saved));
         refreshItems()
     }
-    
+
     generateView()
 
     $(".create").on("click", addActivity)
@@ -262,7 +262,7 @@ $(function(){
     $('#activity-form').on('submit', (e) => {
         e.preventDefault();
     });
-    
+
     // GO BACK A DAY 
     $("#dayEarlier").on("click", () => {
         today = today.subtract(1, 'day');
@@ -285,40 +285,52 @@ $(function(){
 let darkMode = document.querySelectorAll(".darkModeBtn");
 let b = document.querySelector("body");
 let fm = document.querySelector("#dayPicked");
-let c= document.querySelector("#img");
+let c = document.querySelector("#img");
 
 
 
 const changeTextToLight = () => {
-    darkMode.forEach(ele =>{
+    darkMode.forEach(ele => {
         ele.innerText = "ENABLE LIGHT MODE"
     })
 }
 
 const changeTextToDark = () => {
-    darkMode.forEach(ele =>{
+    darkMode.forEach(ele => {
         ele.innerText = "ENABLE DARK MODE"
     })
 }
 
-darkMode.forEach( ele =>{
-        ele.addEventListener('click', () => {
+darkMode.forEach(ele => {
+    ele.addEventListener('click', () => {
 
         console.log(ele.innerText);
-        if(ele.innerText == "ENABLE DARK MODE") {
+        if (ele.innerText == "ENABLE DARK MODE") {
+            localStorage.setItem("darkmode", "true");
             changeTextToLight();
             b.classList.add('darkmode');
-            c.src="images/4457753.png";
-           
+            c.src = "images/4457753.png";
+
 
         }
-        else  {
+        else {
+            localStorage.setItem("darkmode", "false");
             changeTextToDark();
             b.classList.remove('darkmode')
-            c.src="images/diary_illustration.jpg"
-           
+            c.src = "images/diary_illustration.jpg"
+
         }
     });
-    }
+}
 );
-
+var dark = localStorage.getItem("darkmode");
+if (dark === "true") {
+    changeTextToLight();
+    b.classList.add('darkmode');
+    c.src = "images/4457753.png";
+}
+else {
+    changeTextToDark();
+    b.classList.remove('darkmode')
+    c.src = "images/diary_illustration.jpg"
+}  
