@@ -1,0 +1,245 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Amatic+SC&family=Dancing+Script&family=Great+Vibes&family=Poppins:wght@100&family=Shadows+Into+Light&display=swap');
+
+body{
+  font-family:'Fredoka One', cursive;
+  font-family: 'Space Mono', monospace;
+}
+h3 {
+  background-color: #d3d3d3;
+  border-radius: 5px;
+  text-align: center;
+  width: 100%;
+  font-size: 1.5rem;
+}
+
+.label,
+.create,
+.delete {
+  width: 100%;
+}
+
+
+
+
+
+.jumbotron {
+  text-align: center;
+  background-image: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0.6) 0%,
+      rgba(0, 0, 0, 0.6) 100%
+    ),
+    url(images/daily-planner-thestreet.jpeg);
+  background-attachment: static;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  
+  color: white;
+  border-radius: 0;
+  margin-bottom: 50px ;
+
+}
+.btn_back{
+  align-items: center;
+  display: flex;
+  justify-content: center;
+}
+
+
+
+.todos {
+  border-top: 1px solid white;
+
+}
+
+.datePicker,
+.timeBlock {
+  border-radius: 5px;
+
+}
+
+footer{
+ 
+  margin: 12px 10px;
+}
+
+
+.footer-content {
+  border-radius: 15px;
+  width: 100%;
+}
+
+.footer-content {
+  background-color: rgb(32, 31, 31);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+}
+
+.footer-content  
+.footer-heading{
+  color: white;
+  margin-top: 15px;
+  font-size: 2rem;
+  font-weight: 400;
+  font-family: 'Shadows Into Light', cursive;
+  margin-bottom: 0px;
+  padding-bottom: 0px;
+}
+
+.footer-content 
+.footer-paragraph {
+  max-width: 500px;
+  color: white;
+  text-align: center;
+  line-height: 20px;
+  margin-top: 10px;
+  font-size: 18px;
+}
+
+.media {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.media li {
+  margin: 0 10px;
+}
+
+.media a {
+  text-decoration: none;
+  color: white;
+}
+
+.media a i {
+  font-size: 2rem;
+}
+
+.media a:hover {
+  color: rgb(9, 158, 232);
+}
+
+.footer-bottom {
+  text-align: center;
+  margin: 10px 0px;
+  color: white;
+}
+
+.footer-bottom span {
+  color: rgb(9, 158, 232);
+  font-family : 'Shadows Into Light', cursive;
+  font-weight: 500;
+}
+
+
+
+
+#dayEarlier,
+#dayPicked,
+#dayLater {
+  font-size: 2em;
+  font-weight: bold;
+  align-items: center;
+  border-radius: 50px;
+  box-shadow:5px 5px 7px black;
+
+}
+
+#dayEarlier:hover{
+  background:rgb(193, 85, 46);
+  box-shadow: 5px 5px 12px blue;
+  inset: none;
+}
+
+#dayLater:hover{
+  background:rgb(193, 85, 46);
+  box-shadow: 5px 5px 12px blue;
+}
+
+#dayEarlier,
+#dayLater {
+  font-weight: bold;
+  background: rgb(110, 106, 113);
+}
+
+.btn-primary{
+  font-weight: bold;
+  border-radius: 8px;
+  background: rgb(110, 106, 113);
+}
+
+
+
+@media only screen and (min-width: 200px) and (max-width: 430px) {
+  .display-3 {
+    font-size: 3rem;
+  }
+
+  .lead {
+    font-size: 1rem;
+  }
+
+  #dayEarlier,
+  #dayPicked,
+  #dayLater {
+    font-size: 1.5rem;
+  }
+}
+@media only screen and (min-width: 992px) and (max-width: 1200px) {
+  h3{
+    font-size: 1.25rem;
+  }
+}
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+  h3{
+    font-size: 1rem;
+  }
+  .hour{
+    margin: 0;
+  }
+  .hourdiv{
+    padding: 0;
+  }
+}
+body.dark{
+  
+    background-color: rgb(32, 31, 31);
+  
+}
+input[type="checkbox"]{
+    -webkit-appearance: none;
+    position: relative;
+    width: 80px;
+    height: 40px;
+    border-radius: 50px;
+    outline: none;
+
+    background-image: url(https://i.postimg.cc/857jHw2q/Screenshot-2020-04-16-at-1-07-06-PM.png);
+    background-size: cover;
+}
+
+input[type="checkbox"]::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 40px;
+    width: 40px;
+    background-color: rgba(0, 0, 0);
+    border-radius: 50px;
+}
+
+input[type="checkbox"]:checked:before{
+    transform: translate(100%);
+}
+
+input[type="checkbox"]:checked{
+    background-image: url(https://i.postimg.cc/Hn0nstVK/Screenshot-2020-04-16-at-1-07-19-PM.png);
+}

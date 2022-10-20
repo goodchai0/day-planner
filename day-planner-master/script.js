@@ -22,11 +22,11 @@ $(function(){
                         </div>
 
                         <div class='col-xs-12 col-md-8'>
-                            <input type='text' class='form-control' data-hour='${i}' id='work' style='width:100%;'placeholder='Eat, sleep, code' minlength='2' maxlength='50'></input>
+                            <input type='text' class='form-control' data-hour='${i}' style='width:100%;'placeholder='Eat, sleep, code' minlength='2' maxlength='50'></input>
                         </div>
 
                         <div class='col-xs-12 col-md-2 pt-1'>
-                            <button type='button' class='btn btn-primary create' id='btn-submit' data-hour='${i}'>Create</button>
+                            <button type='button' class='btn btn-primary create' data-hour='${i}'>Create</button>
                         </div>
                     </form>
 
@@ -47,11 +47,11 @@ $(function(){
                         </div>
 
                         <div class='col-xs-12 col-md-8'>
-                            <input type='text' class='form-control' id='work' data-hour='${i}' style='width:100%;'placeholder='Eat, sleep, code' minlength='2' maxlength='50'></input>
+                            <input type='text' class='form-control' data-hour='${i}' style='width:100%;'placeholder='Eat, sleep, code' minlength='2' maxlength='50'></input>
                         </div>
 
                         <div class='col-xs-12 col-md-2 pt-1'>
-                            <button type='button' class='btn btn-primary create' id='btn-submit' data-hour='${i}'>Create</button>
+                            <button type='button' class='btn btn-primary create' data-hour='${i}'>Create</button>
                         </div>
                     </form>
 
@@ -72,11 +72,11 @@ $(function(){
                         </div>
 
                         <div class='col-xs-12 col-md-8'>
-                            <input type='text' class='form-control' id='work' data-hour='${i}' style='width:100%;'placeholder='Eat, sleep, code' minlength='2' maxlength='50'></input>
+                            <input type='text' class='form-control' data-hour='${i}' style='width:100%;'placeholder='Eat, sleep, code' minlength='2' maxlength='50'></input>
                         </div>
 
                         <div class='col-xs-12 col-md-2 pt-1'>
-                            <button type='button' class='btn btn-primary create' id='btn-submit' data-hour='${i}'>Create</button>
+                            <button type='button' class='btn btn-primary create' data-hour='${i}'>Create</button>
                         </div>
                     </form>
 
@@ -97,11 +97,11 @@ $(function(){
                         </div>
 
                         <div class='col-xs-12 col-md-8'>
-                            <input type='text' class='form-control' data-hour='${i}' id='work' style='width:100%;'placeholder='Eat, sleep, code' minlength='2' maxlength='50'></input>
+                            <input type='text' class='form-control' data-hour='${i}' style='width:100%;'placeholder='Eat, sleep, code' minlength='2' maxlength='50'></input>
                         </div>
 
                         <div class='col-xs-12 col-md-2 pt-1'>
-                            <button type='button' class='btn btn-primary create' id='btn-submit' data-hour='${i}'>Create</button>
+                            <button type='button' class='btn btn-primary create' data-hour='${i}'>Create</button>
                         </div>
                     </form>
 
@@ -121,11 +121,11 @@ $(function(){
                         </div>
 
                         <div class='col-xs-12 col-md-8'>
-                            <input type='text' class='form-control' id='work' data-hour='${i}' style='width:100%;'placeholder='Eat, sleep, code' minlength='2' maxlength='50'></input>
+                            <input type='text' class='form-control' data-hour='${i}' style='width:100%;'placeholder='Eat, sleep, code' minlength='2' maxlength='50'></input>
                         </div>
 
                         <div class='col-xs-12 col-md-2 pt-1'>
-                            <button type='button' class='btn btn-primary create' id='btn-submit' data-hour='${i}'>Create</button>
+                            <button type='button' class='btn btn-primary create' data-hour='${i}'>Create</button>
                         </div>
                     </form>
 
@@ -133,14 +133,6 @@ $(function(){
                 </div>`
             );   
         }
-         //Enter functionalty
-        let input = document.getElementById("work");
-        input.addEventListener("keydown", (event) => {
-            if (event.key === "Enter") {
-                event.preventDefault();
-                document.getElementById("btn-submit").click();
-            }
-        });
 
         if(localStorage.getItem(date)){
             refreshItems()
@@ -235,22 +227,20 @@ $(function(){
         let date = moment($('#dayPicked').text()).locale('fr').format('L');
         let saved = JSON.parse(localStorage.getItem(date));
         let buttonHour = $(this).attr("data-hour");
-        let buttonIndx = $(this).attr("data-index");
+        let buttonIndex = $(this).attr("data-index");
 
         saved.forEach((hour, i) => {
             if(hour.time == buttonHour){ 
-                
-                // Button index holds the element positon in the array for which delete was clicked for that  hour
-                // This removes 1 string from index = buttonIndx
-                hour.activity.splice(buttonIndx, 1);
-                
+                // Remove element at buttonindex. 
+                // Button index holds the element positon in the array for which delete was clicked for that hour
+                hour.activity.splice(buttonIndex, 1);
                 // IF LAST ACTIVITY IN ARR, REMOVE ARR SO IT PLAYS NICE IN addActivity FUNC
                 if(hour.activity.length === 0){
                     saved.splice(i, 1)
                 }
             }
         });
-    
+       
         localStorage.setItem(date, JSON.stringify(saved));
         refreshItems()
     }
@@ -285,8 +275,6 @@ $(function(){
 let darkMode = document.querySelectorAll(".darkModeBtn");
 let b = document.querySelector("body");
 let fm = document.querySelector("#dayPicked");
-let c= document.querySelector("#img");
-
 
 
 const changeTextToLight = () => {
@@ -308,17 +296,21 @@ darkMode.forEach( ele =>{
         if(ele.innerText == "ENABLE DARK MODE") {
             changeTextToLight();
             b.classList.add('darkmode');
-            c.src="images/4457753.png";
-           
 
         }
-        else  {
+        else {
             changeTextToDark();
             b.classList.remove('darkmode')
-            c.src="images/diary_illustration.jpg"
-           
         }
     });
     }
 );
+
+
+
+let toggle = document.getElementById("mode");
+
+toggle.addEventListener('click', () => {
+    document.body.classList.toggle('dark');
+})
 
