@@ -15,3 +15,4 @@ We are very grateful to the following people have contributed to this project.
 - [Amit Kumar](https://github.com/goodchai0)
 - [Reuben Antz](https://github.com/wizeewig)
 - [Teslim](https://github.com/saluteslim)
+- [Riya Jaggi](https://github.com/riyajaggi)
