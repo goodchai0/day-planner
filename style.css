@@ -262,7 +262,21 @@ font-weight: 700;
   /* .darkmode #img{
    
   } */
+.darkModeBtn{
+  background-color: black;
+  border-radius: 5px;
+  color: white;
 
+}
+.darkmode #darkMode{
+  background-color: white;
+  color: black;
+  font-weight: bolder;
+
+}
+/* .darkmode #darkMode:hover{
+  color: black;
+} */
 .darkmode .shadow-textarea textarea.form-control {
   color: #d3d3d3;
 }
