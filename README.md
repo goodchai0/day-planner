@@ -8,6 +8,8 @@ Manage your work and life efficiently with DAY-PLANNER.
 
 With DAY-PLANNER you never miss any of your meetings and any other important tasks. Write down all your work and life related tasks in an organized way with DAY-PLANNER. Get your day organized in seconds.
 
+##React day planner website
+![web screenshot](https://github.com/palhimalaya/Day_Planner_Nextjs/blob/main/public/workday%20planner.png)
 
 ## Tech Stack
 
@@ -34,6 +36,7 @@ Clone the project
 git clone https://github.com/goodchai0/day-planner.git
 ```
 - run the index.html on your browser.
+- It run's on the port 5500 on your local machine
 
 
 
