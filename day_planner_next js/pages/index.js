@@ -38,7 +38,7 @@ export default function Home() {
     setEntry(JSON.parse(localStorage.getItem("entries")) || []);
   };
 
-  //set entries to cookie
+  //set entries to localStorage
   useEffect(() => {
     setData();
   }, []);
