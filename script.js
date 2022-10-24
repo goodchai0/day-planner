@@ -285,9 +285,7 @@ $(function(){
 let darkMode = document.querySelectorAll(".darkModeBtn");
 let b = document.querySelector("body");
 let fm = document.querySelector("#dayPicked");
-let c= document.querySelector("#img");
-
-
+let c = document.querySelector("#img");
 
 const changeTextToLight = () => {
     darkMode.forEach(ele =>{
@@ -301,24 +299,32 @@ const changeTextToDark = () => {
     })
 }
 
+function renderMode() {
+    if(localStorage.getItem('darkMode')) {
+        changeTextToLight();
+        b.classList.add('darkmode');
+        c.src="images/4457753.png";
+    }
+    else {
+        changeTextToDark();
+        b.classList.remove('darkmode')
+        c.src="images/diary_illustration.jpg"
+    }
+}
+
+window.onload = () => {
+    renderMode()
+}
+
 darkMode.forEach( ele =>{
         ele.addEventListener('click', () => {
-
-        console.log(ele.innerText);
-        if(ele.innerText == "ENABLE DARK MODE") {
-            changeTextToLight();
-            b.classList.add('darkmode');
-            c.src="images/4457753.png";
-           
-
-        }
-        else  {
-            changeTextToDark();
-            b.classList.remove('darkmode')
-            c.src="images/diary_illustration.jpg"
-           
-        }
-    });
+            if (localStorage.getItem('darkMode')) {
+                localStorage.removeItem('darkMode');
+            } else {
+                localStorage.setItem('darkMode', true);
+            }
+            renderMode()
+        });
     }
 );
 
