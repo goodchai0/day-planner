@@ -175,6 +175,9 @@ footer{
   background: rgb(110, 106, 113);
 }
 
+.btn-btt{
+  background-color: crimson;
+}
 
 
 @media only screen and (min-width: 200px) and (max-width: 430px) {
