@@ -46,6 +46,9 @@ h3 {
   margin-bottom: 50px ;
 
 }
+.btn-danger{
+  color: black;
+}
 .btn_back{
   align-items: center;
   display: flex;
